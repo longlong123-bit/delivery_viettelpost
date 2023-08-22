@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="viettelpost_info_sale_order_form_view" model="ir.ui.view">
+        <field name="name">viettelpost.info.sale.order.form.view</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='order_lines']" position="after">
+                <page string="Viettelpost Info" attrs="{'invisible': [('viettelpost_waybill_order', '=', False)]}">
+                    <group>
+                        <group>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="viettelpost_money_total"/>
+                            <field name="viettelpost_money_total_fee"/>
+                            <field name="viettelpost_fee_vat"/>
+                            <field name="viettelpost_money_collection_fee"/>
+                            <field name="viettelpost_money_fee"/>
+                            <field name="viettelpost_money_other_fee"/>
+                        </group>
+                        <group>
+                            <field name="viettelpost_money_collection"/>
+                            <field name="viettelpost_waybill_order"/>
+                            <field name="viettelpost_status"/>
+                            <field name="viettelpost_person_in_charge"/>
+                            <field name="viettelpost_phone" widget="phone"/>
+                            <field name="viettelpost_note"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="viettelpost_product_type"/>
+                            <field name="viettelpost_national_type"/>
+                            <field name="viettelpost_order_payment"/>
+                        </group>
+                        <group>
+                            <field name="viettelpost_service_type"/>
+                            <field name="viettelpost_extend_service_type"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

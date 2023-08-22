@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_viettelpost_province,viettelpost_province,model_viettelpost_province,base.group_system,1,1,1,1
+access_viettelpost_district,viettelpost_district,model_viettelpost_district,base.group_system,1,1,1,1
+access_viettelpost_ward,viettelpost_ward,model_viettelpost_ward,base.group_system,1,1,1,1
+access_viettelpost_connect_history,viettelpost_connect_history,model_viettelpost_connect_history,base.group_system,1,1,1,1
+access_viettelpost_webhook_history,viettelpost_webhook_history,model_viettelpost_webhook_history,base.group_system,1,1,1,1
+access_viettelpost_office,viettelpost_office,model_viettelpost_office,base.group_system,1,1,1,1
+access_viettelpost_service,viettelpost_service,model_viettelpost_service,base.group_system,1,1,1,1
+access_viettelpost_extend_service,viettelpost_extend_service,model_viettelpost_extend_service,base.group_system,1,1,1,1
+access_viettelpost_print_waybill,viettelpost_print_waybill,model_viettelpost_print_waybill,base.group_system,1,1,1,1
+access_viettelpost_status,viettelpost_status,model_viettelpost_status,base.group_system,1,1,1,1
+access_viettelpost_status,viettelpost_status,model_viettelpost_status,base.group_system,1,1,1,1
+access_viettelpost_register_warehouse,viettelpost_register_warehouse,model_viettelpost_register_warehouse,base.group_system,1,1,1,1

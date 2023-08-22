@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="res_partner_viettelpost_shipping_address_form_view" model="ir.ui.view">
+        <field name="name">res.partner.viettelpost.shipping.address.form.view</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[last()]" position="after">
+                <page string="Viettelpost Address">
+                    <group>
+                        <group>
+                            <field name="street"/>
+                            <field name="viettelpost_ward_id"/>
+                            <field name="viettelpost_district_id"/>
+                            <field name="viettelpost_province_id"/>
+                        </group>
+                        <group attrs="{'invisible': [('name', '!=', 'Viettelpost')]}">
+                            <label for="viettelpost_api_key"/>
+                            <div>
+                                <button type="object"
+                                        class="fa fa-arrow-right oe_link"
+                                        name="generate_api_key"
+                                        string=" Generate API Key"/>
+                                <field name="viettelpost_api_key" widget="CopyClipboardChar"/>
+                            </div>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
