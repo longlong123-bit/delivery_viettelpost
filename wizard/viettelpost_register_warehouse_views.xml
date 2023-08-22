@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="viettelpost_register_warehouse_form_view" model="ir.ui.view">
+        <field name="name">viettelpost.register.warehouse.form.view</field>
+        <field name="model">viettelpost.register.warehouse</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="phone"/>
+                    </group>
+                    <group>
+                        <field name="street"/>
+                        <field name="viettelpost_ward_id" options="{'no_create_edit': True}"/>
+                        <field name="viettelpost_district_id" options="{'no_create_edit': True}"/>
+                        <field name="viettelpost_province_id" options="{'no_create_edit': True}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button type="object" name="register_warehouse" string="Register" class="oe_highlight"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="viettelpost_register_warehouse_action" model="ir.actions.act_window">
+        <field name="name">Register Warehouse</field>
+        <field name="res_model">viettelpost.register.warehouse</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
