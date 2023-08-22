@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem   id="menu_viettelpost_resource_stock"
+                parent="stock.menu_stock_config_settings"
+                sequence="55"
+                name="Viettelpost Resources"
+    />
+
+    <menuitem   id="menu_viettelpost_post_office_stock"
+                parent="menu_viettelpost_resource_stock"
+                action="viettelpost_office_action"
+                sequence="1"
+                name="Post Offices"
+    />
+
+    <menuitem   id="menu_viettelpost_province_stock"
+                parent="menu_viettelpost_resource_stock"
+                action="viettelpost_province_action"
+                sequence="5"
+                name="Provinces"
+    />
+
+    <menuitem   id="menu_viettelpost_district_stock"
+                parent="menu_viettelpost_resource_stock"
+                action="viettelpost_district_action"
+                sequence="10"
+                name="Districts"
+    />
+
+    <menuitem   id="menu_viettelpost_ward_stock"
+                parent="menu_viettelpost_resource_stock"
+                action="viettelpost_ward_action"
+                sequence="15"
+                name="Wards"
+    />
+
+    <menuitem   id="menu_viettelpost_service_stock"
+                parent="menu_viettelpost_resource_stock"
+                action="viettelpost_service_action"
+                sequence="20"
+                name="Services"
+    />
+
+    <menuitem   id="menu_viettelpost_status_stock"
+                parent="menu_viettelpost_resource_stock"
+                action="viettelpost_status_action"
+                sequence="25"
+                name="Status"
+    />
+
+    <menuitem   id="menu_viettelpost_technical"
+                parent="stock.menu_stock_config_settings"
+                sequence="60"
+                name="Viettelpost Technical"
+    />
+
+    <menuitem   id="menu_viettelpost_tracking_request"
+                parent="menu_viettelpost_technical"
+                action="viettelpost_connect_history_action_view"
+                sequence="1"
+                name="API Request Tracking"
+    />
+
+    <menuitem   id="menu_viettelpost_webhook_tracking"
+                parent="menu_viettelpost_technical"
+                action="viettelpost_webhook_history_action"
+                sequence="5"
+                name="API Webhook Tracking"
+    />
+</odoo>
